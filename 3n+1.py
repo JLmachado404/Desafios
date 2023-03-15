@@ -17,9 +17,12 @@ def sequencia(i,j):
 
 while True:
   try:
-    i, j = input("").split()
-    i, j = int (i),int(j)
-    sequencia(i,j)
+    numbers = input().split("\n")
+
+    for line in numbers:
+      i, j = line.split(" ")
+      i, j = int(i), int(j)
+      sequencia(i,j)
   except EOFError:
     break
  
